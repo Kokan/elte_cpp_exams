@@ -1,9 +1,9 @@
-STATE	FILE
- NOK	almain.cpp
- NOK	amapmain.cpp
+STATE	TEST			HEADER
+  OK	almain.cpp		autolist.h
+  OK	amapmain.cpp	automap.h
  NOK	ammain.cpp
  NOK	ammain_001.cpp
-  OK	arrmain.cpp
+  OK	arrmain.cpp		Array.h
  NOK	arrmain_001.cpp
  NOK	asmain.cpp
  NOK	as_main.cpp
@@ -22,7 +22,7 @@ STATE	FILE
  NOK	dirmain.cpp
  NOK	drsmain.cpp
  NOK	equmain.cpp
- NOK	fammain.cpp
+  OK	fammain.cpp		amatrix.h
  NOK	grmain.cpp
  NOK	grmain_001.cpp
  NOK	hashmain.cpp
@@ -42,7 +42,7 @@ STATE	FILE
  NOK	palstrmain.cpp
  NOK	prmain.cpp
  NOK	psmain.cpp
- NOK	pstrmain.cpp
+  OK	pstrmain.cpp	pstring.h
  NOK	rcsmain.cpp
  NOK	repstrmain.cpp
  NOK	safevecmain.cpp
@@ -52,7 +52,7 @@ STATE	FILE
  NOK	sqmain.cpp
  NOK	sqmain_001.cpp
  NOK	stamain.cpp
-  OK	statmain.cpp
+  OK	statmain.cpp	stat.h
  NOK	strmain.cpp
  NOK	svecmain.cpp
  NOK	svmain.cpp
