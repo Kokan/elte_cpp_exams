@@ -1,0 +1,81 @@
+
+C:\Users\kokan\My Documents\GitHub\elte_cpp_exams>echo off 
+compile almain.cpp......OK
+Your mark is 2
+compile amapmain.cpp......NOK
+compile ammain.cpp......OK
+Your mark is 1
+compile ammain_001.cpp......OK
+Your mark is 1
+compile arrmain.cpp......OK
+1 
+3 
+2 2 2 
+Your mark is 5
+
+
+
+compile arrmain_001.cpp......OK
+Your mark is 1
+compile asmain.cpp......NOK
+compile as_main.cpp......NOK
+compile bdmmain.cpp......NOK
+compile bidirmain.cpp......NOK
+compile books.cpp......NOK
+compile bstrmain.cpp......NOK
+compile cgmain.cpp......NOK
+compile clmain.cpp......NOK
+compile cmmain.cpp......NOK
+compile contmapmain.cpp......NOK
+compile csetmain.cpp......NOK
+compile csmain.cpp......NOK
+compile cvecmain.cpp......NOK
+compile cvmain.cpp......NOK
+compile dirmain.cpp......NOK
+compile drsmain.cpp......NOK
+compile equmain.cpp......NOK
+compile fammain.cpp......OK
+Your mark is 1
+compile grmain.cpp......NOK
+compile grmain_001.cpp......NOK
+compile hashmain.cpp......NOK
+compile hmapmain.cpp......NOK
+compile immain.cpp......NOK
+compile lgmain.cpp......NOK
+compile mlsmain.cpp......NOK
+compile mmain.cpp......NOK
+compile mmmapmain.cpp......NOK
+compile mmvmain.cpp......NOK
+compile mscvmain.cpp......NOK
+compile msetmain.cpp......NOK
+compile msmain.cpp......NOK
+compile msmain_001.cpp......NOK
+compile multimain.cpp......NOK
+compile n_bag_main.cpp......NOK
+compile palstrmain.cpp......OK
+Your mark is 5
+compile prmain.cpp......NOK
+compile psmain.cpp......NOK
+compile pstrmain.cpp......OK
+Your mark is 1
+compile rcsmain.cpp......NOK
+compile repstrmain.cpp......NOK
+compile safevecmain.cpp......NOK
+compile setseqmain.cpp......NOK
+compile slmain.cpp......NOK
+compile slmain_001.cpp......NOK
+compile sqmain.cpp......OK
+Your mark is 5
+compile sqmain_001.cpp......OK
+Your mark is 1
+compile stamain.cpp......OK
+Your mark is 1
+compile statmain.cpp......OK
+Your mark is 5
+compile strmain.cpp......NOK
+compile svecmain.cpp......NOK
+compile svmain.cpp......NOK
+compile uvmapmain.cpp......NOK
+compile vmmain.cpp......NOK
+compile vvmain2.cpp......NOK
+compile wgmain.cpp......NOK

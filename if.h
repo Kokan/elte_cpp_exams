@@ -1,16 +1,21 @@
 #ifndef TEMPLATE_IF__H
 #define TEMPLATE_IF__H
 
-template <bool cond, class Then, class Else>
-struct If
+template< bool Cond,
+          typename True,
+          typename False>
+struct IF_
 {
-  typedef Then Ret;
+	typedef True type;
 };
 
-template <class Then, class Else>
-struct If<false, Then, Else>
+template< typename True,
+          typename False>
+struct IF_< false,
+            True,
+			False >
 {
-  typedef Else Ret;
+	typedef False type;
 };
 
 #endif

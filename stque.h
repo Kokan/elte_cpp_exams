@@ -1,24 +1,18 @@
+/**************************************************************************
+ *
+ * Author: Kókai Péter
+ * E-mail: kokaipeter[a]gmail[d]com
+ *
+ * Test:   sqmain.cpp
+ *
+ **************************************************************************/
 #ifndef _STACK_QUEUE_
 #define _STACK_QUEUE_
 
 #include <stack>
 #include <queue>
 
-template< bool Cond,
-          typename True,
-          typename False>
-struct IF_
-{
-	typedef True type;
-};
-
-template< typename True,
-          typename False>
-struct IF_<false,True,False>
-{
-	typedef False type;
-};
-
+#include "if.h"
 
 
 template< typename T,
@@ -27,11 +21,16 @@ template< typename T,
 class StackQueue
 {
 public:
-	typedef typename Container::size_type size_type;
-	typedef T 							  value_type;
-
 	struct queue_ {};
 	struct stack_ {};
+	
+	typedef typename Container::size_type size_type;
+	typedef T                             value_type;
+	typedef typename IF_< Stack,
+	                      stack_,
+	                      queue_ >::type  container_type;
+	
+	StackQueue( ) {}
 	
 	template< typename Iterator >
 	StackQueue ( Iterator first, Iterator last )
@@ -42,63 +41,15 @@ public:
 		}
 	}
 	
-	StackQueue( ) {}
-
-	void push( const T& value, queue_ ) {
-		_data.push_front( value );
-	}
+	void push( const T& value ) { push( value, container_type() ); }
 	
-	void push( const T& value, stack_ ) {
-		_data.push_front( value );
-	}
+	T  get( ) const { return get( container_type() ); }
+	T& get( )       { return get( container_type() ); }
 	
-	void push( const T& value )
-	{
-		push( value, typename IF_<Stack,stack_,queue_>::type() );
-	}
-
-	T get( queue_ ) const {
-		return _data.back( );
-	}
+	void pop( )     { pop( container_type() ); }
 	
-	T get( stack_ ) const {
-		return _data.front( );
-	}
-	
-	T get( ) const
-	{
-		return get( typename IF_<Stack,stack_,queue_>::type() );
-	}
-
-	T& get( queue_ ) {
-		return _data.back( );
-	}
-	
-	T& get( stack_ ) {
-		return _data.front( );
-	}
-	
-	T& get( )
-	{
-		return get( typename IF_<Stack,stack_,queue_>::type() );
-	}
-
-	void pop( queue_ ) {
-		_data.pop_back();
-	}
-	
-	void pop( stack_ ) {
-		_data.pop_front();
-	}
-	
-	void pop( )
-	{
-		pop( typename IF_<Stack,stack_,queue_>::type() );
-	}
-	
-	size_type size() const { return _data.size(); }
-	bool empty() const { return _data.empty(); }
-	
+	size_type size()  const { return _data.size();  }
+	bool      empty() const { return _data.empty(); }
 	
 	std::stack< T, typename std::deque< T > > get_stack() const
 	{
@@ -109,13 +60,21 @@ public:
 	{
 		return std::queue< T, typename std::deque< T > >( std::deque<T>( _data.begin(), _data.end() ) );
 	}
+protected:
+	void push( const T& value, queue_ ) { _data.push_front( value ); }
+	void push( const T& value, stack_ ) { _data.push_front( value ); }
+	
 
+	inline T  get( queue_ ) const { return _data.back( );  }
+	inline T  get( stack_ ) const { return _data.front( ); }
+	inline T& get( queue_ )       { return _data.back( );  }
+	inline T& get( stack_ )       { return _data.front( ); }
+	
+	inline void pop( queue_ ) { _data.pop_back();  }
+	inline void pop( stack_ ) { _data.pop_front(); }
+	
 private:
 	Container _data;
 };
-
-
-
-
 
 #endif // _STACK_QUEUE_
