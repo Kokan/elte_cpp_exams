@@ -4,6 +4,7 @@
  * E-mail: kokaipeter[a]gmail[d]com
  *
  * Test:   bdmain.cpp
+ *         bidirmap.cpp
  *
  **************************************************************************/
 #ifndef _BIMAP_
@@ -41,6 +42,9 @@ public:
 		
 		throw std::out_of_range(  "BidirectionalMap::At" );
 	}
+	
+	T1  operator[]( const T1 &value ) const { return at( value ); }
+	T1& operator[]( const T1 &value )       { return at( value ); }
 	
 	size_type count( const T1 &key ) const { return key_value.count( key ) + value_key.count( key ); }
 	
@@ -87,6 +91,5 @@ private:
 	std::map< T1, T1 > key_value;
 	std::map< T1, T1 > value_key;
 };
-
 
 #endif // _BIMAP_
