@@ -1,3 +1,11 @@
+/**************************************************************************
+ *
+ * Author: Kókai Péter
+ * E-mail: kokaipeter[a]gmail[d]com
+ *
+ * Test:   
+ *
+ **************************************************************************/
 #ifndef _ASSOC_MATRIX_
 #define _ASSOC_MATRIX_
 
@@ -167,6 +175,28 @@ private:
 	std::map< T1, unsigned int > row;//_data[ row[ind1] ][ cul[ ind2 ] ]
 	std::map< T1, unsigned int > cul;
 	bool trans;
+};
+
+
+
+template< typename T1,
+          typename T2 >
+class AssocMatrix
+{
+public:
+	T2& get( const T1 &ind0, const T1 &ind1 )       { return _data.at( ind0, ind1 ); }
+	T2  get( const T1 &ind0, const T1 &ind1 ) const { return _data.at( ind0, ind1 ); }
+	
+	void set( const T1 &ind0, const T1 &ind1, const T2 &value )
+	{
+		_data.add_row_column( ind0 );
+		_data.add_row_column( ind1 );
+		
+		_data.set( ind0, ind1, value );
+		std::cout << _data( ind0, ind1 ) << "," << value << std::endl;
+	}
+private:
+	assoc_matrix< T1, T2 > _data;
 };
 
 

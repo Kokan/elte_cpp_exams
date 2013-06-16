@@ -1,10 +1,15 @@
 
-C:\Users\kokan\My Documents\GitHub\elte_cpp_exams>echo off 
+C:\Users\kokan\Documents\GitHub\elte_cpp_exams>echo off 
 compile almain.cpp......OK
 Your mark is 2
 compile amapmain.cpp......NOK
 compile ammain.cpp......OK
-Your mark is 1
+0,2
+0,5
+0,4
+0,3
+,teszt
+Your mark is 0
 compile ammain_001.cpp......OK
 Your mark is 1
 compile arrmain.cpp......OK
@@ -19,8 +24,10 @@ compile arrmain_001.cpp......OK
 Your mark is 1
 compile asmain.cpp......NOK
 compile as_main.cpp......NOK
-compile bdmmain.cpp......NOK
-compile bidirmain.cpp......NOK
+compile bdmmain.cpp......OK
+Your mark is 5
+compile bidirmain.cpp......OK
+Your mark is 1
 compile books.cpp......NOK
 compile bstrmain.cpp......NOK
 compile cgmain.cpp......NOK
