@@ -1,6 +1,6 @@
 project(elte_cpp_exams CXX)
 
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 2.8.7)
 enable_testing()
 set(CMAKE_CXX_STANDARD 11)
 
@@ -91,7 +91,7 @@ add_exam(arrmain 5)
 #add_exam(slmain)
 #add_exam(smmain)
 #add_exam(splmain)
-add_exam(sqmain 5)
+#add_exam(sqmain 5)
 #add_exam(stamain)
 #add_exam(statmain)
 #add_exam(strmain)
